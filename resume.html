@@ -1,0 +1,180 @@
+<html>
+	<head> 
+		<link href="logo.jpg" rel="icon">
+
+		<style type="text/css">
+			@media print{
+				.button{
+					display:none;
+				}
+				.dp{
+					display:none;
+				}
+			}
+			img{
+				border-radius: 50%;
+			}
+			font{
+				size:20px;
+			}
+			.button{
+				width: 100px;
+				height:40px;
+				background-color: #024c83;
+				color:white;
+				border-radius: 12px;
+				border:2px solid white;
+			}
+			.button:hover{
+				background-color: white;
+				color:black;
+				border:2px solid #024c83;
+			}
+		</style>
+		<title>RESUME</title>
+	</head>
+	<body>
+		<table border="0px" cellspacing="0px" align="center" cellpadding="20px">
+			<tr>
+				<td width="650px" height="1050px" bgcolor="#eeedf3" valign="top">
+					<h1>PRIYESH <font color="#288bb9">KUMAR</font> PRAMANIK</h1>
+					<hr color="#288bb9"/>
+					<h2>PROFILE</h2>
+					<hr/>
+					To put all my efforts and knowledge to ensure the best output and make the organization to reach great position, I work with.
+					<h2>EDUCATION</h2>
+					<hr color="#288bb9"/>
+					<table border="0px" cellspacing="0px">
+						<tr>
+							<td width="124px" height="119px" valign="top">
+								<font color="#95949a">2019-2022</font>
+							</td>
+							<td width="522px" height="119px" valign="top">
+								<b>DIPLOMA</b>(in COMPUTER ENGINEERING)
+								<ul>
+									<li><font color="#95949a">Passing Year:</font> 2022</li>
+									<li><font color="#95949a">College:</font> Government Polytechnic Kharsawan</li>
+									<li><font color="#95949a">University/Board:</font> Jharkhand University of Technology</li>
+									
+								</ul>
+							</td>
+							
+						</tr>
+						<tr>
+							<td width="124px" height="119px" valign="top">
+								<font color="#95949a">2018-2019</font>
+							</td>
+							<td width="522px" height="119px" valign="top">
+								<b>MATRICULATION</b>
+								<ul>
+									<li><font color="#95949a">Passing Year:</font> 2019</li>
+									<li><font color="#95949a">School:</font> Vig English School</li>
+									<li><font color="#95949a">University/Board:</font> ICSE</li>
+									
+								</ul>
+							</td>
+							
+						</tr>
+						
+						
+					</table>
+					<h2>INTERNSHIP IN WEB DESIGNING</h2>
+					<hr color="#288bb9"/>
+					<table border="0px" cellspacing="0px">
+						<tr>
+							
+							<td width="522px" height="70px" valign="top">
+								<ul>
+									<li>Technical Training: <b>Kunalitechnology</b></li>
+									<li>Duration: <b>30 days</b></li>
+									
+								</ul>
+							</td>
+							
+						</tr>
+					</table>
+					<h2>SKILLS</h2>
+					<hr color="#288bb9"/>
+					<table>
+						<tr>
+							<td width="250px" height="100px">
+								<ul>
+									<li>C</li>
+									<li>C++</li>
+									<li>Java</li>
+									<li>Python</li>
+								</ul>
+							</td>
+							<td width="250px" height="100px">
+								<ul>
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>Javascript</li>
+									<li>Sql Server</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+					<h2>DECLARATION</h2>
+					<hr color="#288bb9"/>
+					I hereby declare that the above mentioned information is correct and up to my knowledge and I bear the responsibility for the correctness of the above mentioned particulars
+
+					<br><br><br>
+					<table cellspacing="0">
+						<tr>
+							<td width="80px" height="50px" align="center"><b>Date:</b> </td>
+							<td width="100px" height="50px" id="now"> </td>
+							<td width="500px" height="50px" align="center"><button class="button" onclick="print()">Save as pdf</button></td>
+						</tr>
+					</table>
+				</td>
+
+
+
+				<td width="250px" height="1050px" bgcolor="#024c83" valign="top">
+					<img src="profile-img1.jpg" width="200px" height="200px" class="dp"/>
+					<h2><font color="white">CONTACT</font></h2>
+					<hr color="white"/>
+					<h3><font color="white">Address</font></h3>
+					<font color="white">Near Vijay Bhawan, Gadra, Jamshedpur 831004, Jharkhand
+					<h3><font color="white">Phone</font></h3>
+					<font color="white">+91 9693871487</font>
+					
+					<h3><font color="white">Email</font></h3>
+					<font color="white">pkp232002@gmail.com</font>
+					<h3><font color="white">Languages</font></h3>
+					<font color="white">English, Hindi</font>
+					<hr color="#95949a"/>
+					<h3><font color="white">Personal Information</font></h3>
+					<font color="white">
+						<ul>
+							<li>DOB: 23rd November, 2002.</li>
+							<li>Gender: Male</li>
+							<li>Nationality: INDIAN</li>
+						</ul>
+					</font>
+					<hr color="#95949a"/>
+					<h3><font color="white">Strength</font></h3>
+					<font color="white">
+						<ul>
+							<li>Having positive attitude towards personal & professional life.</li>
+							<li>Enthusiasm to learn new technologies.</li>
+							<li>Good at team work and Quick learner</li>
+							<li>Hordworking and committed towards work.</li>
+						</ul>
+					</font>
+				</td>
+			</tr>
+			
+		</table>
+	</body>
+	<script>
+		var d=new Date();
+        var d1=d.getDate();
+        var m=d.getMonth();
+        var y=d.getFullYear();
+        var txt="";
+        txt=d1+"/"+m+"/"+y;
+        document.getElementById("now").innerHTML=txt;
+	</script>
+</html>
