@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Animation with Auto-Scroll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b1522;
+        }
+        .heart{
+			height:80px;
+			width:80px;
+			background: #f20044;
+			transform: rotate(-45deg);
+			box-shadow: -10px 10px 90px #f20044;
+			animation:beat 0.6s linear infinite;
+		}
+		.heart::before{
+			content:'';
+			position:absolute;
+			height:80px;
+			width:80px;
+			background:#f20044;
+			top:-50%;
+			border-radius: 50px;
+			box-shadow: -10px 10px 90px #f20044;
+		}
+		.heart::after{
+			content:'';
+			position:absolute;
+			height:80px;
+			width:80px;
+			background: #f20044;
+			right:-50%;
+			border-radius: 50px;
+			box-shadow: -10px 10px 90px #f20044;
+		}
+		.pkp {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            background: #f20044;
+            /* border-radius: 50%; Optional: makes it a circle */
+            top: 50%;
+            left: 50%;
+            transform: rotate(-45deg);
+            z-index: 0; /* Ensures it's behind the content */
+            pointer-events: none; /* Allows clicks to pass through */
+			animation:beat 0.6s linear infinite;
+        }
+        .pkp:before{
+            content:'';
+			position:absolute;
+			height:80px;
+			width:80px;
+			background:#f20044;
+			top:-50%;
+			border-radius: 50px;
+			box-shadow: -10px 10px 90px #f20044;
+        }
+        .pkp:after{
+            content:'';
+			position:absolute;
+			height:80px;
+			width:80px;
+			background:#f20044;
+			right:-50%;
+			border-radius: 50px;
+			box-shadow: -10px 10px 90px #f20044;
+        }
+        @keyframes beat {
+    0%{
+        transform:rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform:rotate(-45deg) scale(1);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.7);
+    }
+    
+}
+        .scroll-container {
+            width: 90%;           /* Set width to fit content nicely */
+            max-height: 80vh;      /* Max height to trigger scroll */
+            overflow-y: auto;      /* Enables vertical scrolling */
+            border: 2px solid #ffffff;
+            padding: 20px;
+            font-family: monospace;
+            color: #ffffff;
+            z-index: 1;
+        }
+        .typing-text {
+            font-size: 20px;
+            font-weight: 600;
+            white-space: pre-wrap; /* Preserves line breaks */
+            word-break: break-word; /* Breaks long words to fit */
+        }
+    </style>
+</head>
+<body>
+    <div class="pkp"></div>
+    <div class="scroll-container">
+        <p class="typing-text"></p>
+    </div>
+
+    <script>
+        const text = "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ...What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text since the 1500s. It has survived not only five centuries but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ..."; // Add your long text with \n for line breaks
+        const typingTextElement = document.querySelector('.typing-text');
+        const scrollContainer = document.querySelector('.scroll-container');
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingTextElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 50); // Adjust typing speed here
+
+                // Auto-scroll to the bottom as the text types
+                scrollContainer.scrollTop = scrollContainer.scrollHeight;
+            }
+        }
+
+        type(); // Start typing
+    </script>
+</body>
+</html>
